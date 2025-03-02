@@ -22,7 +22,7 @@ This guide provides a concise walkthrough to set up ArgoCD on Minikube and deplo
 
     ```bash
     kubectl create namespace argocd
-    kubectl apply -n argocd -f [https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml](https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml)
+    kubectl apply -n argocd -f [https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml]
     kubectl get pods -n argocd -w # Wait for pods to be Running
     ```
 
