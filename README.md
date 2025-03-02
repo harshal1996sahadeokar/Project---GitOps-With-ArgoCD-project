@@ -14,7 +14,7 @@ This guide provides a concise walkthrough to set up ArgoCD on Minikube and deplo
 1.  **Start Minikube:**
 
     ```bash
-    minikube start
+    minikube start --driver=docker
     kubectl cluster-info
     ```
 
