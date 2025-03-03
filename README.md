@@ -47,53 +47,15 @@ This guide provides a concise walkthrough to set up ArgoCD on Minikube and deplo
     -   Clone the repository:
 
         ```bash
-        git clone [https://github.com/YOUR_USERNAME/gitops-argocd-minikube.git](https://github.com/YOUR_USERNAME/gitops-argocd-minikube.git)
+        git clone https://github.com/harshal1996sahadeokar/Project---GitOps-With-ArgoCD-project.git
         cd gitops-argocd-minikube
         mkdir k8s && cd k8s
         ```
 
     -   Create `deployment.yaml`:
 
-        ```yaml
-        apiVersion: apps/v1
-        kind: Deployment
-        metadata:
-          name: my-app
-          labels:
-            app: my-app
-        spec:
-          replicas: 2
-          selector:
-            matchLabels:
-              app: my-app
-          template:
-            metadata:
-              labels:
-                app: my-app
-            spec:
-              containers:
-                - name: my-app
-                  image: nginx
-                  ports:
-                    - containerPort: 80
-        ```
 
     -   Create `service.yaml`:
-
-        ```yaml
-        apiVersion: v1
-        kind: Service
-        metadata:
-          name: my-app-service
-        spec:
-          selector:
-            app: my-app
-          ports:
-            - protocol: TCP
-              port: 80
-              targetPort: 80
-          type: NodePort
-        ```
 
     -   Commit and push:
 
@@ -107,7 +69,7 @@ This guide provides a concise walkthrough to set up ArgoCD on Minikube and deplo
 
     ```bash
     argocd app create my-app \
-      --repo [https://github.com/YOUR_USERNAME/gitops-argocd-minikube.git](https://github.com/YOUR_USERNAME/gitops-argocd-minikube.git) \
+      --repo https://github.com/harshal1996sahadeokar/Project---GitOps-With-ArgoCD-project.git \
       --path k8s \
       --dest-server [https://kubernetes.default.svc](https://kubernetes.default.svc) \
       --dest-namespace default
