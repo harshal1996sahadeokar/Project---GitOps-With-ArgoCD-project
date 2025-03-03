@@ -1,6 +1,8 @@
 # Project : ArgoCD on Minikube Quickstart
 
 This guide provides a concise walkthrough to set up ArgoCD on Minikube and deploy a sample application using GitOps.
+![image](https://github.com/user-attachments/assets/e7eb8cb6-4ee2-40af-829a-8d740556c9b0)
+
 
 ## Prerequisites
 
