@@ -80,11 +80,12 @@ This guide provides a concise walkthrough to set up ArgoCD on Minikube and deplo
     ```bash
     argocd app create my-app \
       --repo https://github.com/harshal1996sahadeokar/Project---GitOps-With-ArgoCD-project.git \
-      --path k8s \
-      --dest-server [https://kubernetes.default.svc](https://kubernetes.default.svc) \
+      --path minikube_k8 \
+      --dest-server https://kubernetes.default.svc](https://kubernetes.default.svc) \
       --dest-namespace default
     argocd app sync my-app
     ```
+![image](https://github.com/user-attachments/assets/b38aa172-9e9d-4f95-a35d-80fd06392e32)
 
 9.  **Verify Deployment:**
 
@@ -93,6 +94,7 @@ This guide provides a concise walkthrough to set up ArgoCD on Minikube and deplo
     kubectl get svc
     minikube service my-app-service
     ```
+![image](https://github.com/user-attachments/assets/fa0e1424-c9c1-4ae2-a68b-017252303d90)
 
 10.  **Cleanup (Optional):**
 
